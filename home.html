@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Background blur and color enhancement */
+        body {
+            background-image: url('https://gmrit.edu.in/images/blocks/Landing.png');
+            background-size: cover;
+            background-attachment: fixed;
+            backdrop-filter: blur(8px);
+            background-color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Navbar styling with gradient */
+        .navbar {
+            background: linear-gradient(90deg, rgba(0, 123, 255, 1) 0%, rgba(102, 16, 242, 1) 100%);
+        }
+        .navbar-brand, .nav-link {
+            color: white !important;
+            font-weight: bold;
+        }
+        .nav-link:hover {
+            color: rgba(255, 255, 255, 0.7) !important;
+        }
+
+        /* Full-screen carousel */
+        .carousel {
+            width: 100vw;
+            height: 100vh; /* Full-screen for larger screens */
+        }
+        .carousel img {
+            height: 100vh;
+            width: 100vw;
+            object-fit: cover;
+        }
+
+        /* For mobile devices, set carousel height to maintain 16:9 ratio */
+        @media (max-width: 768px) {
+            .carousel {
+                height: calc(100vw * 9 / 16); /* 16:9 ratio */
+            }
+            .carousel img {
+                height: calc(100vw * 9 / 16); /* Adjust images to 16:9 ratio */
+                width: 100vw;
+            }
+        }
+
+        /* Subject boxes with gradient and hover effect */
+        .subject-box {
+            padding: 20px;
+            margin: 10px;
+            border-radius: 15px;
+            background: linear-gradient(145deg, rgba(0, 123, 255, 0.9), rgba(102, 16, 242, 0.9));
+            color: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .subject-box:hover {
+            transform: translateY(-10px);
+            background: linear-gradient(145deg, rgba(0, 123, 255, 1), rgba(102, 16, 242, 1));
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Footer styling with gradient */
+        footer {
+            background: linear-gradient(90deg, rgba(0, 123, 255, 1), rgba(102, 16, 242, 1));
+            color: white;
+            padding: 15px 0;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .subject-box {
+                margin: 10px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="#">Student Portal</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Subjects</a></li>
+                <li class="nav-item"><a class="nav-link" href="istereg.html">Events</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Profile
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                      <li class="dropdown-header">User: <span id="userEmail">User</span></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#" id="logout" style="color: red;"><i class="fa fa-sign-out"></i> Logout</a></li>
+                    </ul>
+                  </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Full-screen Carousel for Department Photos -->
+<div id="departmentCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://gmrit.edu.in/images/blocks/Landing.png" class="d-block" alt="Department 1">
+        </div>
+        <!-- <div class="carousel-item">
+            <img src="https://images.shiksha.com/mediadata/images/1545136205phpUM2meI_g.png" class="d-block" alt="Department 2">
+        </div>
+        <div class="carousel-item">
+            <img src="https://img.jagranjosh.com/images/2022/December/20122022/GMR-Institute-of-Technology-GMRIT-Rajam-Campus-View-4.jpg" class="d-block" alt="Department 3">
+        </div> -->
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#departmentCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#departmentCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </button>
+</div>
+
+<!-- Subject Selection Boxes -->
+<div class="container mt-5">
+    <div class="row text-center">
+        <div class="col-md-3">
+            <div class="subject-box">
+                <h3>3rd Semester</h3>
+                <a href="#" class="btn btn-primary mt-3">Select</a>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="subject-box">
+                <h3>4th Semester</h3>
+                <a href="#" class="btn btn-primary mt-3">Select</a>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="subject-box">
+                <h3>5th Semester</h3>
+                <a href="#" class="btn btn-primary mt-3">Select</a>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="subject-box">
+                <h3>6th Semester</h3>
+                <a href="#" class="btn btn-primary mt-3">Select</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="text-center mt-5">
+    <div class="container">
+        <p>&copy; 2024 Student Portal | Designed by [Your Name]</p>
+    </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+    import { getAuth, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
+  
+    // Firebase configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyBp0QsE20S-TMQRHHbYJllfEXiZ-2INXPo",
+        authDomain: "project-gmrit.firebaseapp.com",
+        projectId: "project-gmrit",
+        storageBucket: "project-gmrit.appspot.com",
+        messagingSenderId: "425997448351",
+        appId: "1:425997448351:web:4601965fe529c6d59f9eaa",
+        measurementId: "G-JJ6SFEGELX"
+      };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+  
+    // Check if user is logged in
+    onAuthStateChanged(auth, (user) => {
+      const userEmailElement = document.getElementById('userEmail');
+      if (user) {
+        userEmailElement.textContent = user.email;
+      } else {
+        window.location.href = 'index.html';
+      }
+    });
+  
+    // Logout function
+    document.getElementById('logout').addEventListener('click', async (e) => {
+      e.preventDefault();
+      try {
+        await signOut(auth);
+        localStorage.clear();
+        window.location.href = 'index.html';
+      } catch (error) {
+        console.error('Error signing out:', error.message);
+        alert('Failed to sign out. Please try again.');
+      }
+    });
+  </script>
+</html>

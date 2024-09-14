@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Caveat:wght@500&family=Dancing+Script:wght@500;600&family=Libre+Barcode+39&family=Libre+Baskerville&family=Nosifer&family=Nothing+You+Could+Do&family=Noto+Sans&family=Pacifico&family=Press+Start+2P&family=Sirin+Stencil&family=Tiro+Telugu&family=Yuji+Hentaigana+Akari&family=Yuji+Syuku&display=swap&effect=fire-animation');
+@import url('https://fonts.googleapis.com/css2?family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap');
+
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text color for the page content */
+}
+
+/* nav css start */
+.navbar {
+    background-color: #000000; /* Black background for navbar */
+    border: #ffffff 1px solid;
+    margin-bottom: 5px;
+}
+.nav-text:hover{
+    color: #d5f7e3;
+}
+.navbar-brand{
+    color: #38c172 ;
+    font-weight: 1000;
+    font-size: 25px;
+    padding-left: 40px;
+}
+.nav-link {
+    color: #ffffff !important; /* White text color for navbar links and brand */
+}
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.1); /* White border for the toggler */
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* White hamburger menu */
+}
+.nav-item{
+    margin-left: 15px;
+    font-size: 18px;
+}
+.nav-item:hover{
+    border-bottom: 1px solid rgb(41, 212, 107);
+}
+
+.dropdown-item.logout {
+  color: #ff0000; /* Red color for logout */
+}
+.dropdown-item.logout:hover {
+  background-color: #ffe6e6; /* Light red background on hover */
+}
+.dropdown-item i {
+  margin-right: 8px; /* Space between icon and text */
+}
+/* nav css end */
+
+/*  carousel starts here*/
+.carousel-caption h5 {
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.carousel-caption p {
+    font-size: 1.2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.carousel-image-container {
+    width: 100%;
+    max-height: 780px; /* Fixed height for the carousel */
+    overflow: hidden; /* Hide the overflowing part of the image */
+    display: flex; /* Use flex to center the image */
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    background-color: #000; /* Optional: Add a background color */
+  }
+  
+  .carousel-image-container img {
+    width: 100%; /* Ensure the image width fits the container */
+    height: auto; /* Maintain the aspect ratio */
+    max-height: 100%; /* Constrain the image height to the container */
+    object-fit: cover ; /* Cover the container area without distortion */
+  }
+/*  carousel ends here*/
+
+/* components section csss starts here */
+.components-section {
+    padding: 60px 20px;
+    background-color: #303033;
+  }
+  .card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  .card-img-top {
+    border-radius: 10px 10px 0 0;
+    height: 180px;
+    object-fit: cover;
+  }
+  .card-body {
+    text-align: center;
+  }
+  .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+  }
+  .btn-visit-more {
+    margin-top: 30px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+  }
+  .btn-visit-more:hover {
+    background-color: #0056b3;
+  }
+/*  commponents css ends here */
+
+/* projects css starts */
+.projects-section {
+    padding: 60px 20px;
+    background-color: #27272e;
+  }
+  .project-card {
+    position: relative;
+    overflow: hidden;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  }
+  .project-card img {
+    border-radius: 15px 15px 0 0;
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .project-info {
+    padding: 20px;
+    text-align: center;
+    background-color: #f8f9fa;
+  }
+  .project-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  .project-description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+  }
+  .project-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+  }
+  .project-btn:hover {
+    background-color: #0056b3;
+  }
+  .btn-view-all {
+    display: block;
+    margin: 40px auto 0;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+  }
+  .btn-view-all:hover {
+    background-color: #218838;
+  }
+/* projects css ends here */
+
+/* dowwmload app css starts */
+
+.download-app-section {
+  padding: 60px 20px;
+  background-color: #303033;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  flex-wrap: wrap;
+}
+.app-logo-container {
+  margin-right: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.app-logo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+.app-info {
+  max-width: 600px;
+}
+.app-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ebdede;
+  margin-bottom: 20px;
+}
+.app-description {
+  font-size: 1.1rem;
+  color: #a3adad;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+.download-btn {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+.download-btn:hover {
+  background-color: #218838;
+}
+@media (max-width: 768px) {
+  .app-logo-container {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .app-info {
+    text-align: center;
+  }
+}
+
+/* download app css ends */
+
+/* about css starts  */
+
+.about-section {
+    background-color: #27272e;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ebdcdc;
+    margin-bottom: 20px;
+  }
+  .about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #bdb4b4;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  .about-image {
+    margin: 40px 0;
+    width: 300px;
+    height: 180px;
+    border-radius: 15px;
+  }
+  .mission {
+    margin-top: 30px;
+    font-size: 1.2rem;
+    color: #007bff;
+  }
+  .team-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+  }
+  .team-member {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .team-member:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  }
+  .team-member img {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+  }
+  .team-member h5 {
+    margin-top: 15px;
+    font-size: 1.25rem;
+    color: #333;
+  }
+  .team-member p {
+    color: #666;
+    font-size: 1rem;
+  }
+
+/* about css ends  */
+
+/* footer css starts */
+
+footer {
+    background-color: #1a1a1a; /* Dark background color */
+    color: #fff; /* White text color */
+    padding: 40px 20px;
+    font-family: 'Rancho', sans-serif; /* Use 'Rancho' font family */
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1 1 300px;
+    margin: 20px; /* Adds space between the sections */
+    text-align: center; /* Center-align text */
+}
+.footer-section a {
+  font-size: 28px;
+  text-decoration: none;
+  color: #cae7d6;
+}
+.footer-section a:hover {
+  color: #31754d;
+}
+.footer-section p {
+    font-size: 25px;
+}
+.footer-section p:hover {
+    color: #31754d;
+}
+.footer-section h3 {
+    font-size: 34px;
+    margin-bottom: 10px;
+    color: #38c172; /* Green accent color */
+}
+.foot-image{
+  margin: 0px 0;
+  width: 150px;
+  height: 90px;
+  border-radius: 15px;
+}
+
+.footer-center ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-center ul li {
+    margin: 5px 0;
+}
+
+.footer-center ul li a {
+    color: #d5f7e3; /* Green link color */
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 25px;
+}
+
+.footer-center ul li a:hover {
+    color: #2b956d; /* Darker green hover color */
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: column; /* Display icons and names vertically */
+    align-items: center; /* Center items horizontally */
+    margin-top: 10px;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px; /* Adjust width as needed */
+    height: 40px;
+    border-radius: 4px;
+    margin: 5px 0; /* Adjust vertical margin */
+    background-color: #38c172; /* Green background color */
+    color: #fff; /* White text color */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s;
+    font-size: 18px;
+}
+
+.social-icons a:hover {
+    background-color: #2b956d; /* Darker green hover color */
+}
+
+.social-icons i {
+    font-size: 24px;
+    margin-right: 10px; /* Space between icon and text */
+}
+
+.social-icons span {
+    font-size: 20px; /* Adjust font size as needed */
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #ccc; /* Lighter text color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        margin: 10px 0; /* Adjust margin for smaller screens */
+    }
+}
+
+/* footer css ends */
