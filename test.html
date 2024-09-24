@@ -34,6 +34,7 @@
 
     canvas {
       border: 1px solid black;
+      margin-bottom: 20px; /* Add spacing between canvases */
     }
   </style>
 </head>
@@ -42,9 +43,7 @@
   <div class="watermark">EleGets Student Portal</div>
 
   <!-- PDF Viewer -->
-  <div id="pdfViewer">
-    <canvas id="pdfCanvas"></canvas>
-  </div>
+  <div id="pdfViewer"></div>
 
   <!-- PDF.js Script -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
@@ -57,16 +56,18 @@
     document.addEventListener('contextmenu', event => event.preventDefault());
 
     let pdfDoc = null;
-    let pageNum = 150;
-    const canvas = document.getElementById('pdfCanvas');
-    const ctx = canvas.getContext('2d');
+    const pdfViewer = document.getElementById('pdfViewer');
 
-    // Render the PDF page
-    const renderPage = num => {
+    // Function to render each page
+    const renderPage = (num) => {
       pdfDoc.getPage(num).then(page => {
         const viewport = page.getViewport({ scale: 1.5 });
+        const canvas = document.createElement('canvas');
+        const ctx = canvas.getContext('2d');
+
         canvas.height = viewport.height;
         canvas.width = viewport.width;
+        pdfViewer.appendChild(canvas);  // Append canvas for each page
 
         const renderContext = {
           canvasContext: ctx,
@@ -77,10 +78,14 @@
       });
     };
 
-    // Load the PDF
+    // Load the PDF and render all pages
     pdfjsLib.getDocument(url).promise.then(pdfDoc_ => {
       pdfDoc = pdfDoc_;
-      renderPage(pageNum);
+      const totalPages = pdfDoc.numPages;
+      
+      for (let i = 1; i <= totalPages; i++) {
+        renderPage(i);  // Render each page one by one
+      }
     });
   </script>
 </body>
